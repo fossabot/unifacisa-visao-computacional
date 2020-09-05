@@ -1,6 +1,0 @@
-../../dataset/dogs_cats/dogs/Cats_Test10.png 500 375 1
-../../dataset/dogs_cats/dogs/Cats_Test27.png 500 357 1
-../../dataset/dogs_cats/cats/Cats_Test20.png 333 500 0
-../../dataset/dogs_cats/dogs/Cats_Test8.png 500 375 1
-../../dataset/dogs_cats/cats/Cats_Test21.png 500 375 0
-../../dataset/dogs_cats/dogs/Cats_Test2.png 333 500 1
