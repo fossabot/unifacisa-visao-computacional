@@ -68,7 +68,7 @@ print(saida_maxpool3.shape)
 
 
 # Obtem as imagens
-kernels = saida_maxpool2.detach().clone()
+kernels = saida_conv3.detach().clone()
 imagens = kernels[0].squeeze()
 
 # Apresenta imagens

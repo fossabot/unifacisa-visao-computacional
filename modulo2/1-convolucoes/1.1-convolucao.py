@@ -14,7 +14,7 @@ arquivo = "./imagens/raposa.jpg"
 imagem = Image.open(arquivo)
 
 print(np.asarray(Image.open(arquivo)).shape)
-#imagem.show()
+imagem.show()
 
 # Realiza pre-processamento na imagem
 proc = Preprocessador()
