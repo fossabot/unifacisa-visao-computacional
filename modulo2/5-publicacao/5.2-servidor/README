@@ -1,0 +1,38 @@
+*********** *********** *********** *********** *********** *********** 
+Dicas sobre o Docker e o Docker-Compose para utilizar GPU via containers
+
+*********** *********** *********** *********** *********** *********** 
+
+***********  Para instalar e configurar o Docker:
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+*********** Adicione o seu usuário ao grupo docker: 
+sudo usermod -aG docker SEU_USUARIO
+
+***********  Use o Docker-Compose
+https://docs.docker.com/compose/install/
+
+***********  Adicione as dependências da NVIDIA para que os seus containers se comuniquem com a GPU
+https://nvidia.github.io/nvidia-container-runtime/
+https://github.com/NVIDIA/nvidia-container-runtime
+
+
+*********** Crie o arquivo daemon.json com a seguinte configuracao *********** 
+
+sudo tee /etc/docker/daemon.json <<EOF
+{
+    "default-runtime": "nvidia",
+    "runtimes": {
+        "nvidia": {
+            "path": "/usr/bin/nvidia-container-runtime",
+            "runtimeArgs": []
+        }
+    }
+}
+EOF
+sudo pkill -SIGHUP dockerd
+
+*********** Reinicie o servico *********** 
+
+sudo pkill -SIGHUP dockerd
+sudo systemctl start docker

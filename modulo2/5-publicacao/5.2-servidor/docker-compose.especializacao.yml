@@ -1,0 +1,10 @@
+version: '3.6'
+services:
+  servidor:
+    container_name: "app_servidor"
+    build: ./servidor 
+    command: python3 server.py 
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    ports:
+      - 0.0.0.0:8081:8081/tcp

@@ -1,0 +1,4 @@
+flask
+jsonpickle
+requests
+opencv-python==4.1.1.26
